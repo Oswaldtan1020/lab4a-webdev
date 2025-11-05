@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Lab 4a - Q2</title>
+</head>
+<body>
+  <input type="text" id="userInput" placeholder="Enter a number">
+  <button onclick="checkInput()">Check</button>
+
+  <script>
+    function checkInput() {
+      const raw = document.getElementById('userInput').value;
+      const trimmed = raw.trim();
+
+      // Check empty or non-numeric
+      if (trimmed === '' || isNaN(trimmed)) {
+        alert("Please insert a number!");
+        return;
+      }
+
+      const num = Number(trimmed);
+
+      if (num < 10) {
+        alert("The number is lower than 10");
+      } else {
+        alert("The number is higher than 10");
+      }
+    }
+  </script>
+</body>
+</html>

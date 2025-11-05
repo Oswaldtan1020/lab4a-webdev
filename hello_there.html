@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Lab 4a - Q1</title>
+</head>
+<body>
+  <div id="myElement">
+    <p>Welcome to my website!</p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const container = document.getElementById('myElement');
+      const p = container.querySelector('p');
+      if (p) {
+        p.textContent = "Hello there!";
+      }
+    });
+  </script>
+</body>
+</html>
